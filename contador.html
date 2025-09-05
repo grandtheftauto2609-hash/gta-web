@@ -1,0 +1,263 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contador GTA 6</title>
+  <link rel="stylesheet" href="style/style.css">
+  <style>
+    /* Contador estilo GTA morado */
+    #contadorGTA6 {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    #contadorGTA6 h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      font-family: 'Courier New', Courier, monospace;
+      color: #a64ca6; /* morado */
+      text-shadow: 2px 2px 4px #000;
+    }
+
+    #tiempo {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .unidad {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    .unidad span {
+      font-size: 50px;
+      font-weight: bold;
+      color: #a64ca6; /* morado */
+      text-shadow: 2px 2px 4px #000;
+      animation: latido 1s infinite alternate;
+    }
+
+    .unidad p {
+      margin: 5px 0 0;
+      font-size: 18px;
+      color: #fff;
+    }
+
+    /* Animación de pulso */
+    @keyframes latido {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.1); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Barra de navegación -->
+  <header class="site-header">
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="contador.html">Contador GTA 6</a></li>
+        <li><a href="trailers.html">Trailers</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contenido principal -->
+  <main>
+    <section class="content-section">
+      <h1 class="encabezado-gta6">Grand Theft Auto 6</h1>
+
+      <!-- Contador -->
+      <div id="contadorGTA6">
+        <div id="tiempo">
+          <div class="unidad">
+            <span id="dias">0</span>
+            <p>Días</p>
+          </div>
+          <div class="unidad">
+            <span id="horas">0</span>
+            <p>Horas</p>
+          </div>
+          <div class="unidad">
+            <span id="minutos">0</span>
+            <p>Minutos</p>
+          </div>
+          <div class="unidad">
+            <span id="segundos">0</span>
+            <p>Segundos</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Script contador -->
+  <script>
+    // Fecha objetivo: 26 de mayo de 2026
+    const fechaObjetivo = new Date("May 26, 2026 00:00:00").getTime();
+
+    const actualizarContador = () => {
+      const ahora = new Date().getTime();
+      const distancia = fechaObjetivo - ahora;
+
+      if (distancia <= 0) {
+        document.getElementById("tiempo").innerHTML = "¡Ya ha llegado el día!";
+        clearInterval(intervalo);
+        return;
+      }
+
+      const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+      const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+      const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
+
+      document.getElementById("dias").innerText = dias;
+      document.getElementById("horas").innerText = horas;
+      document.getElementById("minutos").innerText = minutos;
+      document.getElementById("segundos").innerText = segundos;
+    }
+
+    const intervalo = setInterval(actualizarContador, 1000);
+    actualizarContador();
+  </script>
+</body>
+</html>
+
+=======
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contador GTA 6</title>
+  <link rel="stylesheet" href="style/style.css">
+  <style>
+    /* Contador estilo GTA morado */
+    #contadorGTA6 {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    #contadorGTA6 h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      font-family: 'Courier New', Courier, monospace;
+      color: #a64ca6; /* morado */
+      text-shadow: 2px 2px 4px #000;
+    }
+
+    #tiempo {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .unidad {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    .unidad span {
+      font-size: 50px;
+      font-weight: bold;
+      color: #a64ca6; /* morado */
+      text-shadow: 2px 2px 4px #000;
+      animation: latido 1s infinite alternate;
+    }
+
+    .unidad p {
+      margin: 5px 0 0;
+      font-size: 18px;
+      color: #fff;
+    }
+
+    /* Animación de pulso */
+    @keyframes latido {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.1); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Barra de navegación -->
+  <header class="site-header">
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="contador.html">Contador GTA 6</a></li>
+        <li><a href="trailers.html">Trailers</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contenido principal -->
+  <main>
+    <section class="content-section">
+      <h1 class="encabezado-gta6">Grand Theft Auto 6</h1>
+
+      <!-- Contador -->
+      <div id="contadorGTA6">
+        <div id="tiempo">
+          <div class="unidad">
+            <span id="dias">0</span>
+            <p>Días</p>
+          </div>
+          <div class="unidad">
+            <span id="horas">0</span>
+            <p>Horas</p>
+          </div>
+          <div class="unidad">
+            <span id="minutos">0</span>
+            <p>Minutos</p>
+          </div>
+          <div class="unidad">
+            <span id="segundos">0</span>
+            <p>Segundos</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Script contador -->
+  <script>
+    // Fecha objetivo: 26 de mayo de 2026
+    const fechaObjetivo = new Date("May 26, 2026 00:00:00").getTime();
+
+    const actualizarContador = () => {
+      const ahora = new Date().getTime();
+      const distancia = fechaObjetivo - ahora;
+
+      if (distancia <= 0) {
+        document.getElementById("tiempo").innerHTML = "¡Ya ha llegado el día!";
+        clearInterval(intervalo);
+        return;
+      }
+
+      const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+      const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+      const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
+
+      document.getElementById("dias").innerText = dias;
+      document.getElementById("horas").innerText = horas;
+      document.getElementById("minutos").innerText = minutos;
+      document.getElementById("segundos").innerText = segundos;
+    }
+
+    const intervalo = setInterval(actualizarContador, 1000);
+    actualizarContador();
+  </script>
+</body>
+</html>
+
+>>>>>>> 9901d55 (añadido trailers)
