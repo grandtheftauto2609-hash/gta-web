@@ -179,21 +179,3 @@ body > * {
   font-size: 80px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-.trailers {
-  text-align: center;
-  margin: 40px auto;
-}
-
-.trailer {
-  margin: 20px 0;
-}
-
-.trailers img {
-  border-radius: 10px;
-  margin: 15px;
-  transition: transform 0.3s ease;
-}
-
-.trailers img:hover {
-  transform: scale(1.05);
-}
