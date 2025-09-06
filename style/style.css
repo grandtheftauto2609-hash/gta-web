@@ -179,3 +179,12 @@ body > * {
   font-size: 80px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+.trailer-container {
+  display: flex;
+  justify-content: center; /* centra horizontalmente */
+  margin: 20px 0;
+}
+iframe {
+  max-width: 100%;
+  height: auto;
+}
